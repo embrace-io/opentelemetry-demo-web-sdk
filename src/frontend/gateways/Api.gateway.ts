@@ -10,7 +10,7 @@ import { context, propagation } from "@opentelemetry/api";
 
 const { userId } = SessionGateway.getSession();
 
-const basePath = '/api';
+const basePath = 'http://localhost:8080/api';
 
 const Apis = () => ({
   getCart(currencyCode: string) {
