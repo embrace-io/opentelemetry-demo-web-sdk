@@ -27,6 +27,9 @@ const {
 } = process.env;
 
 const nextConfig = {
+  experimental: {
+    externalDir: true,
+  },
   reactStrictMode: true,
   output: 'standalone',
   swcMinify: true,
@@ -41,7 +44,6 @@ const nextConfig = {
       config.resolve.fallback.dns = false;
       config.resolve.fallback.fs = false;
     }
-
     return config;
   },
   env: {
@@ -58,9 +60,9 @@ const nextConfig = {
     NEXT_PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT,
   },
   images: {
-    loader: "custom",
-    loaderFile: "./utils/imageLoader.js"
-  }
+    loader: 'custom',
+    loaderFile: './utils/imageLoader.js',
+  },
 };
 
 module.exports = nextConfig;
