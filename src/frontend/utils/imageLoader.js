@@ -10,11 +10,11 @@ let protocol = "http";
 
 if (typeof window !== "undefined" && window.location) {
   hostname = window.location.hostname;
-  // port = window.location.port ? parseInt(window.location.port, 10) : (window.location.protocol === "https:" ? 443 : 80);
+  port = window.location.port ? parseInt(window.location.port, 10) : (window.location.protocol === "https:" ? 443 : 80);
   protocol = window.location.protocol.slice(0, -1); // Remove trailing ':'
 }
 
 export default function imageLoader({ src, width, quality }) {
   // We pass down the optimisation request to the image-provider service here, without this, nextJs would try to use internal optimiser which is not working with the external image-provider.
-  return `${protocol}://${hostname}:8080/${src}?w=${width}&q=${quality || 75}`
+  return `${protocol}://${hostname}:${port}/${src}?w=${width}&q=${quality || 75}`
 }

@@ -39,7 +39,7 @@ if (typeof window !== 'undefined') {
       const useTLS = window.location.protocol === 'https:';
       let port = useTLS ? 443 : 80;
       if (window.location.port) {
-          port = 8080;
+          port = parseInt(window.location.port, 10);
       }
 
       OpenFeature.setProvider(

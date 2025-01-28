@@ -43,7 +43,7 @@ export const NavBarBrand = styled(Link)`
 `;
 
 export const BrandImg = styled.img.attrs({
-  src: 'http://localhost:8080/images/opentelemetry-demo-logo.png',
+  src: '/images/opentelemetry-demo-logo.png',
 })`
   width: 280px;
   height: auto;
