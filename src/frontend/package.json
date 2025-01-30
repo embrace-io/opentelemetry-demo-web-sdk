@@ -11,7 +11,7 @@
     "grpc:generate": "mkdir -p ./protos && protoc -I ./../../pb  --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_opt=esModuleInterop=true --ts_proto_out=./protos --ts_proto_opt=outputServices=grpc-js demo.proto"
   },
   "dependencies": {
-    "@embraceio/embrace-web-sdk": "0.0.1",
+    "@embraceio/embrace-web-sdk": "0.0.4",
     "@grpc/grpc-js": "1.10.11",
     "@openfeature/flagd-provider": "0.13.1",
     "@openfeature/flagd-web-provider": "0.7.2",
@@ -28,6 +28,8 @@
     "@opentelemetry/resource-detector-aws": "1.5.2",
     "@opentelemetry/resource-detector-container": "0.3.11",
     "@opentelemetry/resource-detector-gcp": "0.29.10",
+    "@opentelemetry/opentelemetry-browser-detector": "^0.57.1",
+    "@opentelemetry/semantic-conventions": "^1.28.0",
     "@opentelemetry/resources": "1.30.0",
     "@opentelemetry/sdk-metrics": "1.25.1",
     "@opentelemetry/sdk-node": "0.52.1",
