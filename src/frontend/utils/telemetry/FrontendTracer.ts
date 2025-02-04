@@ -11,7 +11,7 @@ import { detectResourcesSync } from '@opentelemetry/resources/build/src/detect-r
 import { ZoneContextManager } from '@opentelemetry/context-zone';
 import { sdk } from '@embraceio/embrace-web-sdk';
 
-const SAMPLE_APP_ID = 'wkugd';
+const SAMPLE_APP_ID = 'iwbcp';
 const {
   NEXT_PUBLIC_OTEL_SERVICE_NAME = '',
   NEXT_PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT = '',
